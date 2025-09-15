@@ -26,3 +26,24 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+// Prints a simple arrow shape (a right-pointing arrow)
+void print_arrow(int leftCol, int size)
+{
+  int mid = size / 2;
+
+  for (int row = 0; row < size; row++) {
+    for (int col = 0; col < leftCol; col++) putchar(' ');
+
+    if (row == mid) {
+      // Draw the shaft of the arrow
+      for (int col = 0; col < size; col++) putchar('*');
+    } else {
+      // Draw just the arrow head
+      for (int col = 0; col < row; col++) putchar(' ');
+      putchar('*');
+    }
+    putchar('\n');
+  }
+}
+
+

@@ -34,10 +34,15 @@ int main()
       goto done; 		/* terminate */
     case '\n':
       break;
-    default:
+	case 'a':
+	  puts("You selected arrow:");
+	  print_arrow(5, 7);
+	  break;
+	    default:
       printf("Unrecognized option '%c', please try again!\n", c);
     }
   }
+	
 
  done: // To exit from program
   return 0;
